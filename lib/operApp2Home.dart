@@ -38,9 +38,9 @@ class _OperApp2HomeState extends State<OperApp2Home>
         controller: _tabController,
         children: <Widget>[
           new CameraScreen(), //
-          Text('2'),
-          Text('3'),
-          Text('4')
+          Text('Opers'),
+          Text('Plans'),
+          Text('Settings')
         ]),
         floatingActionButton: new FloatingActionButton(
           backgroundColor: Theme.of(context).accentColor,
