@@ -1,4 +1,7 @@
 import 'package:floper2/screens/camera_screen.dart';
+import 'package:floper2/screens/opers_screen.dart';
+import 'package:floper2/screens/plan_screen.dart';
+import 'package:floper2/screens/settings_screent.dart';
 import 'package:flutter/material.dart';
 
 class OperApp2Home extends StatefulWidget {
@@ -33,14 +36,15 @@ class _OperApp2HomeState extends State<OperApp2Home>
             new Tab(icon: new Icon(Icons.settings_applications))
           ]
         ),
+        actions: <Widget>[new Icon(Icons.kitchen)],
       ),
       body: new TabBarView(
         controller: _tabController,
         children: <Widget>[
           new CameraScreen(), //
-          Text('Opers'),
-          Text('Plans'),
-          Text('Settings')
+          new OpersScreen(),
+          new PlanScreen(),
+          new SettingsScreen()
         ]),
         floatingActionButton: new FloatingActionButton(
           backgroundColor: Theme.of(context).accentColor,
