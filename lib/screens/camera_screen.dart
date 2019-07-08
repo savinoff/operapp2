@@ -5,8 +5,10 @@ class CameraScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Center(
+    return new Container(
+        child: new Center(
       child: Text('Camera Screen', style: new TextStyle(fontSize: 20.0)),
-    ); 
+      ),
+    );
   }
 }

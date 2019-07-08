@@ -1,6 +1,6 @@
 import 'package:floper2/screens/camera_screen.dart';
 import 'package:floper2/screens/opers_screen.dart';
-import 'package:floper2/screens/plan_screen.dart';
+import 'package:floper2/screens/plans_screen.dart';
 import 'package:floper2/screens/settings_screent.dart';
 import 'package:flutter/material.dart';
 
@@ -27,31 +27,28 @@ class _OperApp2HomeState extends State<OperApp2Home>
         title: Text('OperApp2'),
         elevation: 0.7,
         bottom: new TabBar(
-          controller: _tabController,
-          indicatorColor: Colors.green,
-          tabs: <Widget>[
-            new Tab(icon: new Icon(Icons.camera_alt)),
-            new Tab(text: 'Opers'),
-            new Tab(text: 'Plan'),
-            new Tab(icon: new Icon(Icons.settings_applications))
-          ]
-        ),
+            controller: _tabController,
+            indicatorColor: Colors.green,
+            tabs: <Widget>[
+              new Tab(icon: new Icon(Icons.camera_alt)),
+              new Tab(text: 'Opers'),
+              new Tab(text: 'Plan'),
+              new Tab(icon: new Icon(Icons.settings_applications))
+            ]),
         actions: <Widget>[new Icon(Icons.kitchen)],
       ),
-      body: new TabBarView(
-        controller: _tabController,
-        children: <Widget>[
-          new CameraScreen(), //
-          new OpersScreen(),
-          new PlanScreen(),
-          new SettingsScreen()
-        ]),
-        floatingActionButton: new FloatingActionButton(
-          backgroundColor: Theme.of(context).accentColor,
-          child: new Icon(Icons.add),
-          onPressed: () => print("add go"),
-
-        ),
+      body: new TabBarView(controller: _tabController, children: <Widget>[
+        new CameraScreen(), //
+        new OpersScreen(),
+        new PlanScreen(),
+        new SettingsScreen()
+      ]),
+      floatingActionButton: new FloatingActionButton(
+        backgroundColor: Theme.of(context).accentColor,
+        child: new Icon(Icons.add),
+        // onPressed: () => print("add go"),
+        onPressed: () => print(context.toString()),
+      ),
     );
   }
 }

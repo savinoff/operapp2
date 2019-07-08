@@ -1,5 +1,7 @@
+
 import 'package:flutter/material.dart';
 import 'package:floper2/models/plan_model.dart';
+
 
 class PlanScreen extends StatefulWidget {
   const PlanScreen({Key key}) : super(key: key);
@@ -27,7 +29,9 @@ class _PlanScreenState extends State<PlanScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       new Text(
-                        dummyData[i].categoryFrom + '->' + dummyData[i].categoryTo,
+                        dummyData[i].categoryFrom +
+                            '->' +
+                            dummyData[i].categoryTo,
                         style: new TextStyle(fontWeight: FontWeight.bold),
                       ),
                       new Text(dummyData[i].name + '(name)')
@@ -35,9 +39,19 @@ class _PlanScreenState extends State<PlanScreen> {
                   ),
                   subtitle: new Container(
                     padding: const EdgeInsets.only(top: 5.0),
-                    child: new Text(dummyData[i].dfrom.toIso8601String()),
+                    child: new Container(
+                      child: RaisedButton(
+                          child: new Text(dummyData[i].dfrom.toIso8601String()),
+                          onPressed: () {
+                            Navigator.pushNamed(
+                                context,
+                                '/planform',
+                                );
+                          }),
+                    ),
                   ),
-                )
+                ),
+                
               ],
             ));
   }
