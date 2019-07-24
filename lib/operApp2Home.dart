@@ -1,5 +1,6 @@
 import 'package:floper2/screens/camera_screen.dart';
 import 'package:floper2/screens/opers_screen.dart';
+import 'package:floper2/screens/planForm_screen.dart';
 import 'package:floper2/screens/plans_screen.dart';
 import 'package:floper2/screens/settings_screent.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class _OperApp2HomeState extends State<OperApp2Home>
     super.initState();
     _tabController = new TabController(vsync: this, initialIndex: 1, length: 4);
   }
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +48,14 @@ class _OperApp2HomeState extends State<OperApp2Home>
         backgroundColor: Theme.of(context).accentColor,
         child: new Icon(Icons.add),
         // onPressed: () => print("add go"),
-        onPressed: () => print(context.toString()),
+        // onPressed: () => print(context.toString()),
+        onPressed: ()  {
+                            Navigator.pushNamed(
+                                context,
+                                PlanFormScreen.routeName,
+                                // arguments: dummyData[i],
+                                );
+                          },
       ),
     );
   }
