@@ -17,13 +17,18 @@ class PlanOperModel {
     print(
         '[PlanOperModel: amount = $amount, categoryFrom = $categoryFrom, categoryTo = $categoryTo, name = $name, payPeriodCode = $payPeriodCode, mandatoryCode = $mandatoryCode, dfrom = $dfrom, dto = $dto]');
   }
+
+  @override
+  String toString() {
+  return 'Операция: '+this.name;
+   }
 }
 
 List<PlanOperModel> dummyData = [
   new PlanOperModel(
-      100, 'пРок', 'пАКред', 'тест', 'S', 'K0', DateTime.now(), DateTime.now()),
+      100, 'пРок', 'пАКред', 'тест 1', 'S', 'K0', DateTime.now(), DateTime.now()),
   new PlanOperModel(
-      10, 'пРок', 'пВтб', 'тест', 'S', 'K0', DateTime.now(), DateTime.now()),
+      10, 'пРок', 'пВтб', 'тест 2', 'S', 'K0', DateTime.now(), DateTime.now()),
   new PlanOperModel(
-      -100, 'пРок', 'пАКред', 'тест', 'S', 'K0', DateTime.now(), DateTime.now())
+      -100, 'пРок', 'пАКред', 'тест 3', 'S', 'K0', DateTime.now(), DateTime.now())
 ];

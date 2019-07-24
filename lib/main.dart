@@ -19,8 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       home: new OperApp2Home(),
       routes: {
-        // '/': (context) => MyApp(),
-        '/planform': (context) => PlanFormScreen(),
+        PlanFormScreen.routeName: (context) => PlanFormScreen(),
       },
     );
   }

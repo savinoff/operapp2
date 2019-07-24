@@ -1,4 +1,5 @@
 
+import 'package:floper2/screens/planForm_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:floper2/models/plan_model.dart';
 
@@ -45,7 +46,8 @@ class _PlanScreenState extends State<PlanScreen> {
                           onPressed: () {
                             Navigator.pushNamed(
                                 context,
-                                '/planform',
+                                PlanFormScreen.routeName,
+                                arguments: dummyData[i],
                                 );
                           }),
                     ),
