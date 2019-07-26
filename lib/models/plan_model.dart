@@ -1,6 +1,7 @@
 import 'dart:core';
 
 class PlanOperModel {
+  num id;
   num amount;
   String payPeriodCode; //D, W, W2...
   String mandatoryCode; //
@@ -10,12 +11,12 @@ class PlanOperModel {
   DateTime dfrom;
   DateTime dto;
 
-  PlanOperModel(this.amount, this.categoryFrom, this.categoryTo, this.name,
+  PlanOperModel(this.id, this.amount, this.categoryFrom, this.categoryTo, this.name,
       this.payPeriodCode, this.mandatoryCode, this.dfrom, this.dto);
 
   void desc() {
     print(
-        '[PlanOperModel: amount = $amount, categoryFrom = $categoryFrom, categoryTo = $categoryTo, name = $name, payPeriodCode = $payPeriodCode, mandatoryCode = $mandatoryCode, dfrom = $dfrom, dto = $dto]');
+        '[PlanOperModel: id = $id, amount = $amount, categoryFrom = $categoryFrom, categoryTo = $categoryTo, name = $name, payPeriodCode = $payPeriodCode, mandatoryCode = $mandatoryCode, dfrom = $dfrom, dto = $dto]');
   }
 
   @override
@@ -26,9 +27,9 @@ class PlanOperModel {
 
 List<PlanOperModel> dummyData = [
   new PlanOperModel(
-      100, 'пРок', 'пАКред', 'тест 1', 'S', 'K0', DateTime.now(), DateTime.now()),
+      1, 100, 'пРок', 'пАКред', 'тест 1', 'S', 'K0', DateTime.now(), DateTime.now()),
   new PlanOperModel(
-      10, 'пРок', 'пВтб', 'тест 2', 'S', 'K0', DateTime.now(), DateTime.now()),
+      2, 10, 'пРок', 'пВтб', 'тест 2', 'S', 'K0', DateTime.now(), DateTime.now()),
   new PlanOperModel(
-      -100, 'пРок', 'пАКред', 'тест 3', 'S', 'K0', DateTime.now(), DateTime.now())
+      3, -100, 'пРок', 'пАКред', 'тест 3', 'S', 'K0', DateTime.now(), DateTime.now())
 ];

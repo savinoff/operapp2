@@ -1,4 +1,5 @@
 import 'package:floper2/models/plan_model.dart';
+import 'package:floper2/screens/planForm2_screen.dart';
 import 'package:flutter/material.dart';
 
 class PlanFormScreen extends StatelessWidget {
@@ -21,7 +22,8 @@ class PlanFormScreen extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        new Text(oper.toString())
+        new Text(oper.toString()),
+        new PlanFormForm(oper: oper,)
       ])),
     );
   }
